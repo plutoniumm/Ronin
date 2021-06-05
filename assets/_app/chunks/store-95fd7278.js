@@ -1,0 +1,1 @@
+import{C as e}from"./vendor-3f6007f7.js";const s=e(""),o=e("none"),t=e=>{s.set(e),o.set("flex"),document.getElementById("frame").scrollIntoView()},n=()=>{o.set("none")};export{s as a,n as h,o as i,t as s};
