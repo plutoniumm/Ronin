@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="/favicon.ico" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel='stylesheet' href='/shared/global.css'>
+
+	
+
+		
+
+		<link rel="modulepreload" href="/./_app/start-4d0a7c3d.js">
+		<link rel="modulepreload" href="/./_app/chunks/vendor-3f6007f7.js">
+		<link rel="modulepreload" href="/./_app/layout.svelte-2bcb6ea3.js">
+		<link rel="modulepreload" href="/./_app/pages/json/components/multiple.svelte-97de6c87.js">
+		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
+
+		<script type="module">
+			import { start } from "/./_app/start-4d0a7c3d.js";
+			start({
+				target: document.querySelector("body"),
+				paths: {"base":"","assets":"/."},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/./_app/layout.svelte-2bcb6ea3.js"),
+						import("/./_app/pages/json/components/multiple.svelte-97de6c87.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "/json/components/multiple",
+						query: new URLSearchParams(""),
+						params: {}
+					}
+				}
+			});
+		</script>
+
+	<script>
+		const URLpars = () => {
+			const entries = new URLSearchParams( window.location.search ).entries();
+			const params = {};
+			for ( let entry of entries ) params[ entry[ 0 ] ] = entry[ 1 ];
+			return params;
+		};
+		const chURL = ( key, value ) => {
+			let searchParams = new URLSearchParams( window.location.search );
+			searchParams.set( key, value );
+			let newurl = `${ window.location.protocol }//${ window.location.host + window.location.pathname
+				}?${ searchParams.toString() }`;
+			window.history.pushState( { path: newurl }, "", newurl );
+			return 0;
+		};
+
+		const serverURL = 'http://localhost:1872/';
+		const clientURL = 'http://localhost:1873/';
+	</script>
+	<script src="./shared/js/molecular.js"></script>
+</head>
+
+<body xmlns:svg="http://www.w3.org/2000/svg" style="position:relative;">
+	
+
+
+<form class="boxes blurW"><fieldset class="w-20"><legend class="label">Name</legend>
+        <input name="record" type="text" placeholder="Name"></fieldset>
+    <fieldset><legend class="label">Type</legend>
+        <input name="type" list="types" type="text" value="Web Series">
+        <datalist id="types"><option value="Web Series"></option><option value="TV Show"></option><option value="Anime"></option></datalist></fieldset>
+    <fieldset><legend class="label">Released</legend>
+        <input name="release" type="number" min="1930" value="2019" max="2021"></fieldset>
+    <fieldset><legend class="label">Grade</legend>
+        <input name="grade" type="text" value="0.00"></fieldset>
+    <fieldset><legend class="label">Speed</legend>
+        <input name="speed" type="text" value="1.6"></fieldset>
+    <fieldset><legend class="label">Source</legend>
+        <input type="text" list="sources" name="source" value="Netflix">
+        <datalist id="sources"><option value="Netflix"></option><option value="PrimeVideo"></option><option value="Torrent"></option><option value="KissAnime"></option><option value="Web"></option><option value="DC++"></option><option value="AppleTV+"></option></datalist></fieldset>
+    <fieldset><legend class="label">Status</legend>
+        <input type="text" name="status" value="Completed"></fieldset></form>
+<br>
+
+
+
+
+	
+
+</body>
+
+</html>

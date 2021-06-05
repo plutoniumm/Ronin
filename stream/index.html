@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="/favicon.ico" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel='stylesheet' href='/shared/global.css'>
+
+	
+
+		
+
+		<link rel="modulepreload" href="/./_app/start-4d0a7c3d.js">
+		<link rel="modulepreload" href="/./_app/chunks/vendor-3f6007f7.js">
+		<link rel="modulepreload" href="/./_app/layout.svelte-2bcb6ea3.js">
+		<link rel="modulepreload" href="/./_app/pages/stream/index.svelte-b8b15343.js">
+		<link rel="modulepreload" href="/./_app/pages/stream/components/bar.svelte-f202f86f.js">
+		<link rel="modulepreload" href="/./_app/chunks/nebulaStore-bb44d245.js">
+		<link rel="modulepreload" href="/./_app/chunks/svgIcon-3fc15a01.js">
+		<link rel="modulepreload" href="/./_app/pages/stream/components/player.svelte-4a8c6717.js">
+		<link rel="modulepreload" href="/./_app/chunks/store-97681db1.js">
+		<link rel="modulepreload" href="/./_app/pages/stream/components/queue.svelte-c61ea948.js">
+		<link rel="modulepreload" href="/./_app/pages/stream/components/subscriptions.svelte-5ca4a21b.js">
+		<link rel="modulepreload" href="/./_app/pages/stream/shared/videoCard.svelte-64d4a978.js">
+		<link rel="modulepreload" href="/./_app/pages/stream/components/search.svelte-adf1d571.js">
+		<link rel="modulepreload" href="/./_app/pages/stream/components/playlists.svelte-682e614a.js">
+		<link rel="modulepreload" href="/./_app/pages/stream/componentsNebula/subscriptions.svelte-fcd27b03.js">
+		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/stream/index.svelte-2dea7642.css">
+		<link rel="stylesheet" href="/./_app/assets/svgIcon.svelte_svelte&type=style&lang-9670f4ad.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/stream/components/bar.svelte-772ecb7f.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/stream/components/player.svelte-fa2c51da.css">
+
+		<script type="module">
+			import { start } from "/./_app/start-4d0a7c3d.js";
+			start({
+				target: document.querySelector("body"),
+				paths: {"base":"","assets":"/."},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/./_app/layout.svelte-2bcb6ea3.js"),
+						import("/./_app/pages/stream/index.svelte-b8b15343.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "/stream",
+						query: new URLSearchParams(""),
+						params: {}
+					}
+				}
+			});
+		</script>
+
+	<script>
+		const URLpars = () => {
+			const entries = new URLSearchParams( window.location.search ).entries();
+			const params = {};
+			for ( let entry of entries ) params[ entry[ 0 ] ] = entry[ 1 ];
+			return params;
+		};
+		const chURL = ( key, value ) => {
+			let searchParams = new URLSearchParams( window.location.search );
+			searchParams.set( key, value );
+			let newurl = `${ window.location.protocol }//${ window.location.host + window.location.pathname
+				}?${ searchParams.toString() }`;
+			window.history.pushState( { path: newurl }, "", newurl );
+			return 0;
+		};
+
+		const serverURL = 'http://localhost:1872/';
+		const clientURL = 'http://localhost:1873/';
+	</script>
+	<script src="./shared/js/molecular.js"></script>
+</head>
+
+<body xmlns:svg="http://www.w3.org/2000/svg" style="position:relative;">
+	
+
+
+<main class="svelte-rus5w2"><section class="o-0 p-10 flex blur svelte-1e1dyug"><div>Mars</div>
+
+  <form style="background:#444;"><input class="p-5 svelte-1e1dyug" id="srcBox" size="35" placeholder="Search" value="">
+    <svg class=" svelte-xufjgf" viewBox="0 0 32 32" width="22" height="22" stroke="currentcolor" stroke-width="2" fill="none" style="position:relative;top:3px;left:5px"><circle cx="14" cy="14" r="12"></circle>
+      <path d="M23 23 L30 30"></path></svg>
+    <input class="o-0 w-0 svelte-1e1dyug" type="submit" value=""></form>
+
+  <div><button class="blue svelte-1e1dyug">★ </button>
+    <button class="red svelte-1e1dyug">★ </button></div>
+</section>
+    <div class="w-100 tx-c" style="height:400px;margin-top: 10%;font: italic 100 48px Helvetica;">Helios
+    </div>
+    <section class="flex p-20" id="search" style="flex-wrap: wrap;"></section>
+    <section class="p-20 flex" id="search" style="flex-wrap: wrap;"></section>
+    <section class="flex p-20" id="search" style="flex-wrap: wrap;"></section>
+    <section class="flex p-20" id="search" style="flex-wrap: wrap;"></section>
+    <section class="p-20 flex" id="search" style="flex-wrap: wrap;"></section>
+</main>
+
+
+
+	
+
+</body>
+
+</html>

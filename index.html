@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="/favicon.ico" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel='stylesheet' href='/shared/global.css'>
+
+	<script data-svelte="svelte-ntg8kh">let suggList = [],
+      suggI = null;
+    const returnSug = (data) => {
+      const bar = document.getElementById("magic");
+      check = (e) => {
+        bar.value = e.innerText;
+        bar.focus();
+      };
+      document.getElementById("autoComplete").innerHTML = data[1]
+        .slice(0, 2)
+        .map((el) => `<li onclick="check(this)">${el[0]}</li>`)
+        .join("<br />");
+      suggList = data[1].slice(0, 5).map((el) => el[0]);
+    };
+
+    const fadeIn = (el) => {
+      el.style.opacity = 0;
+      let tick = () => {
+        el.style.opacity = +el.style.opacity + 0.025;
+        if (+el.style.opacity < 0.66)
+          (window.requestAnimationFrame && requestAnimationFrame(tick)) ||
+            setTimeout(tick, 1);
+      };
+      tick();
+    };
+
+    let bgImg = new Image(1440, 900);
+    bgImg.src = "https://picsum.photos/1440/810?random=1";
+    bgImg.onload = () => {
+      const cont = document.getElementById("bgContainer");
+      cont.appendChild(bgImg);
+      fadeIn(bgImg);
+      cont.childNodes[0].remove();
+    };
+  </script><link rel="preconnect" href="https://en.wikipedia.org/" data-svelte="svelte-ntg8kh"><link rel="preconnect" href="https://github.com" data-svelte="svelte-ntg8kh"><link rel="prefetch" href="/stream" data-svelte="svelte-ntg8kh"><link rel="prefetch" href="/search" data-svelte="svelte-ntg8kh"><style data-svelte="svelte-ntg8kh">*::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+
+		
+
+		<link rel="modulepreload" href="/./_app/start-4d0a7c3d.js">
+		<link rel="modulepreload" href="/./_app/chunks/vendor-3f6007f7.js">
+		<link rel="modulepreload" href="/./_app/layout.svelte-2bcb6ea3.js">
+		<link rel="modulepreload" href="/./_app/pages/index.svelte-1a389b99.js">
+		<link rel="modulepreload" href="/./_app/pages/command/micro/topbar.svelte-6bf9da86.js">
+		<link rel="modulepreload" href="/./_app/chunks/yoroi-52ef10cd.js">
+		<link rel="modulepreload" href="/./_app/pages/command/micro/sumbox.svelte-aecbdc96.js">
+		<link rel="modulepreload" href="/./_app/pages/command/components/search.svelte-b618608d.js">
+		<link rel="modulepreload" href="/./_app/pages/command/components/ifr.svelte-c4b462fd.js">
+		<link rel="modulepreload" href="/./_app/chunks/store-95fd7278.js">
+		<link rel="modulepreload" href="/./_app/chunks/svgIcon-3fc15a01.js">
+		<link rel="modulepreload" href="/./_app/pages/command/lazy/news.svelte-b666d2ee.js">
+		<link rel="modulepreload" href="/./_app/pages/command/lazy/google.svelte-fae4a693.js">
+		<link rel="modulepreload" href="/./_app/pages/command/lazy/reddit.svelte-7f0daf23.js">
+		<link rel="modulepreload" href="/./_app/chunks/button-ce08e4cb.js">
+		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/index.svelte-5a182733.css">
+		<link rel="stylesheet" href="/./_app/assets/svgIcon.svelte_svelte&type=style&lang-9670f4ad.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/command/micro/topbar.svelte-d7b0f66c.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/command/micro/sumbox.svelte-e11b47dd.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/command/components/search.svelte-25d713c3.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/command/components/ifr.svelte-faa1d584.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/command/lazy/google.svelte-18f6f105.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/command/lazy/reddit.svelte-2637614a.css">
+
+		<script type="module">
+			import { start } from "/./_app/start-4d0a7c3d.js";
+			start({
+				target: document.querySelector("body"),
+				paths: {"base":"","assets":"/."},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/./_app/layout.svelte-2bcb6ea3.js"),
+						import("/./_app/pages/index.svelte-1a389b99.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "/",
+						query: new URLSearchParams(""),
+						params: {}
+					}
+				}
+			});
+		</script>
+
+	<script>
+		const URLpars = () => {
+			const entries = new URLSearchParams( window.location.search ).entries();
+			const params = {};
+			for ( let entry of entries ) params[ entry[ 0 ] ] = entry[ 1 ];
+			return params;
+		};
+		const chURL = ( key, value ) => {
+			let searchParams = new URLSearchParams( window.location.search );
+			searchParams.set( key, value );
+			let newurl = `${ window.location.protocol }//${ window.location.host + window.location.pathname
+				}?${ searchParams.toString() }`;
+			window.history.pushState( { path: newurl }, "", newurl );
+			return 0;
+		};
+
+		const serverURL = 'http://localhost:1872/';
+		const clientURL = 'http://localhost:1873/';
+	</script>
+	<script src="./shared/js/molecular.js"></script>
+</head>
+
+<body xmlns:svg="http://www.w3.org/2000/svg" style="position:relative;">
+	
+
+
+
+
+<div id="bgContainer" class="svelte-qkahzl"><img src="./shared/images/Terra.jpg" class="w-100 svelte-qkahzl" alt=""></div>
+
+<section class="w-100 svelte-qkahzl"><div class="flex svelte-2zgsdk" id="deets"><svg viewbox="0 0 256 128" height="22px"><defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#000;"></stop><stop offset="100%" style="stop-color:#900;"></stop></linearGradient></defs><text fill="url(#grad1)" font-weight="700" font-family="Times" font-size="128" x="0" y="110">浪人
+    </text></svg>
+  <div class="f-wt7">Segment
+    4 (<i>-0:49:29</i>)</div>
+  <div>Sat, 5 Jun, 23:10</div></div>
+  <div id="stats" class="blur rpm-10 svelte-1242rom">Fan Speed: <progress max="6520" value="0"></progress>
+  <br> CPU Temp: <progress max="100" value="0"></progress>
+  <br> MBo Temp: <progress max="100" value="0"></progress>
+  <br> Network Av: <i>Calculating...</i>
+</div>
+  <section class="flex-col" style="justify-content: center;align-items: center;"><br>
+  <form class="flex svelte-o0q5ul"><div class="wrapper flex p-5 svelte-o0q5ul"><img id="engineImage" src="/icons/Basic.svg" alt="" class="svelte-o0q5ul">
+      <input id="magic" placeholder="Type Something..." required size="150" class="svelte-o0q5ul"></div>
+    <input id="submit" type="submit" value="SEARCH" class="svelte-o0q5ul"></form>
+  <div class="p-10" style="width:calc(100% - 1em);margin-top:0.5em;"><ul id="autoComplete" class="blur m-h-auto o-100 svelte-o0q5ul"></ul></div>
+</section>
+  <br>
+  <div id="Qlinks" class="svelte-qkahzl">Scroll for Today <br>
+    <svg class=" svelte-xufjgf" viewBox="0 0 32 32" width="24" height="24" stroke="currentcolor" stroke-width="2" fill="none" style=""><path d="M30 12 L16 24 2 12"></path></svg></div></section>
+
+<section style="padding:0 25%;height:auto;" class="svelte-qkahzl"><div id="newsBox" class="w-100 m-h-auto" style="margin-top:20%;"></div></section>
+
+<article id="frame" class="w-100 flex svelte-r2kgmh" style="display:none;"><div class="flex" style="position:absolute;top:7vh;left:7vw;"><div class="a svelte-r2kgmh" style="background:#f8a;"><svg class=" svelte-xufjgf" viewBox="0 0 32 32" width="24" height="24" stroke="currentcolor" stroke-width="2" fill="none" style=""><path d="M2 30 L30 2 M30 30 L2 2"></path></svg></div>
+    <a href="" target="_blank" style="background:#a8f;" class="svelte-r2kgmh"><svg class=" svelte-xufjgf" viewBox="0 0 32 32" width="24" height="24" stroke="currentcolor" stroke-width="2" fill="none" style=""><path d="M14 9 L3 9 3 29 23 29 23 18 M18 4 L28 4 28 14 M28 4 L14 18"></path></svg></a></div>
+  <iframe src="" title="News Item" frameborder="0" class="svelte-r2kgmh"></iframe>
+</article>
+
+
+
+	
+
+</body>
+
+</html>
