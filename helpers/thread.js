@@ -13,7 +13,7 @@ const HNBase = 'https://hacker-news.firebaseio.com/v0/';
 const HNCfg = '?print=pretty'
 this.onmessage = e => {
       if ( e.data.func === "getShows" ) {
-            fetch( "/data/multiple.json" )
+            fetch( "data/multiple.json" )
                   .then( ( res ) => res.json() )
                   .then( ( r ) => {
                         let shows = r.map( el => {
