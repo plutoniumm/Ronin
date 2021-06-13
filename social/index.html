@@ -8,37 +8,32 @@
 
 	<link rel='stylesheet' href='/shared/global.css'>
 
-	<title>Saturn Social</title><style data-svelte="svelte-1fkheh0">body {
-      background: url(./shared/images/Saturn.jpg) no-repeat fixed;
-      background-size: cover;
+	<title>Saturn Social</title><style data-svelte="svelte-1py0a3p">body {
+      color: #000;
+      background: #fff;
     }
   </style>
 
 		
 
-		<link rel="modulepreload" href="/Ronin/_app/start-582bca86.js">
-		<link rel="modulepreload" href="/Ronin/_app/chunks/vendor-3f6007f7.js">
-		<link rel="modulepreload" href="/Ronin/_app/chunks/paths-45dac81d.js">
-		<link rel="modulepreload" href="/Ronin/_app/layout.svelte-2bcb6ea3.js">
-		<link rel="modulepreload" href="/Ronin/_app/pages/social/__layout.svelte-349b7bee.js">
-		<link rel="modulepreload" href="/Ronin/_app/pages/social/components/technews.svelte-cd7e0c28.js">
-		<link rel="modulepreload" href="/Ronin/_app/pages/social/components/gtrends.svelte-6b13346b.js">
-		<link rel="modulepreload" href="/Ronin/_app/pages/social/components/hackernews.svelte-17bd350a.js">
-		<link rel="modulepreload" href="/Ronin/_app/chunks/yoroi-52ef10cd.js">
-		<link rel="modulepreload" href="/Ronin/_app/pages/social/components/specifix.svelte-35cf8f07.js">
-		<link rel="modulepreload" href="/Ronin/_app/pages/social/index.svelte-13a54112.js">
-		<link rel="stylesheet" href="/Ronin/_app/assets/start-a8cd1609.css">
-		<link rel="stylesheet" href="/Ronin/_app/assets/pages/social/__layout.svelte-5e8d9090.css">
-		<link rel="stylesheet" href="/Ronin/_app/assets/pages/social/components/technews.svelte-48dd4865.css">
-		<link rel="stylesheet" href="/Ronin/_app/assets/pages/social/components/gtrends.svelte-c276983c.css">
-		<link rel="stylesheet" href="/Ronin/_app/assets/pages/social/components/hackernews.svelte-445c29ed.css">
-		<link rel="stylesheet" href="/Ronin/_app/assets/pages/social/components/specifix.svelte-4ed1f59f.css">
+		<link rel="modulepreload" href="/./_app/start-4f27af6a.js">
+		<link rel="modulepreload" href="/./_app/chunks/vendor-3f6007f7.js">
+		<link rel="modulepreload" href="/./_app/chunks/paths-45dac81d.js">
+		<link rel="modulepreload" href="/./_app/layout.svelte-2bcb6ea3.js">
+		<link rel="modulepreload" href="/./_app/pages/social/__layout.svelte-ad7ca9d6.js">
+		<link rel="modulepreload" href="/./_app/pages/social/micro/logo.svelte-bbc1cad2.js">
+		<link rel="modulepreload" href="/./_app/chunks/navigator-55f55ffc.js">
+		<link rel="modulepreload" href="/./_app/pages/social/index.svelte-74513995.js">
+		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/social/__layout.svelte-aaa21671.css">
+		<link rel="stylesheet" href="/./_app/assets/navigator-31e8a466.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/social/index.svelte-566a9c8b.css">
 
 		<script type="module">
-			import { start } from "/Ronin/_app/start-582bca86.js";
+			import { start } from "/./_app/start-4f27af6a.js";
 			start({
 				target: document.querySelector("body"),
-				paths: {"base":"/Ronin","assets":"/Ronin"},
+				paths: {"base":"","assets":"/."},
 				session: {},
 				host: location.host,
 				route: true,
@@ -48,9 +43,9 @@
 					status: 200,
 					error: null,
 					nodes: [
-						import("/Ronin/_app/layout.svelte-2bcb6ea3.js"),
-						import("/Ronin/_app/pages/social/__layout.svelte-349b7bee.js"),
-						import("/Ronin/_app/pages/social/index.svelte-13a54112.js")
+						import("/./_app/layout.svelte-2bcb6ea3.js"),
+						import("/./_app/pages/social/__layout.svelte-ad7ca9d6.js"),
+						import("/./_app/pages/social/index.svelte-74513995.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -84,19 +79,35 @@
 	<script src="./shared/js/molecular.js"></script>
 </head>
 
-<body xmlns:svg="http://www.w3.org/2000/svg" style="position:relative;">
+<body xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:relative;">
 	
 
 
 
 
-<section><nav class="rpm-10 flex blur svelte-iqtdu5"><button class="ln rpm-10 false svelte-iqtdu5">TechNews
-      </button><button class="ln rpm-10 false svelte-iqtdu5">Google
-      </button><button class="ln rpm-10 false svelte-iqtdu5">HackerNews
-      </button><button class="ln rpm-10 blurW svelte-iqtdu5">Specifics
-      </button></nav>
+<section><nav class="flex svelte-qvtrs"><header class="p-20 flex" style="border-bottom:1px solid #8882;"><img src="/icons/saturn.svg" width="28px" height="28px" alt="">
+    <details class="svelte-e257xo"><summary style="position:relative;top:1px;left:5px;font-size:24px;" class="svelte-e257xo">Saturn</summary>
+    <nav class="flex rpm-10 svelte-e257xo"><a class="rpm-10 tx-c" href="/"><img src="/assets/ronin.png" height="60px" width="60px" alt="Home" class="svelte-e257xo">
+                <div>Home</div>
+            </a><a class="rpm-10 tx-c" href="/notes"><img src="/icons/terrelys.svg" height="60px" width="60px" alt="Notes" class="svelte-e257xo">
+                <div>Notes</div>
+            </a><a class="rpm-10 tx-c" href="/stream"><img src="/icons/Netflix.svg" height="60px" width="60px" alt="Video" class="svelte-e257xo">
+                <div>Video</div>
+            </a></nav>
+</details></header>
+    <div class="flex p-20"><a class="p-5" href="/social/">Home</a><a class="p-5" href="/social/Google">Google</a><a class="p-5" href="/social/HackerNews">HackerNews</a><a class="p-5" href="/social/Specifics">Specifics</a></div></nav>
 
-  <section><article class="w-33"></article></section></section>
+  <section class="flex"><article class="w-25 p-5 m-5"><div class="boxy p-10 svelte-1r7qih1" style="border: 1px solid #ccc8;">r/TechNews</div>
+            
+        </article><article class="w-25 p-5 m-5"><div class="boxy p-10 svelte-1r7qih1" style="border: 1px solid #ccc8;">r/Physics</div>
+            
+        </article><article class="w-25 p-5 m-5"><div class="boxy p-10 svelte-1r7qih1" style="border: 1px solid #ccc8;">r/Science</div>
+            
+        </article><article class="w-25 p-5 m-5"><div class="boxy p-10 svelte-1r7qih1" style="border: 1px solid #ccc8;">r/TodayILearned</div>
+            
+        </article>
+</section>
+</section>
 
 
 
