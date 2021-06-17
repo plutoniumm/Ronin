@@ -8,22 +8,25 @@
 
 	<link rel='stylesheet' href='/shared/global.css'>
 
-	<title>Jupiter</title><script src="/helpers/codes/codemirror.js" data-svelte="svelte-1471t2x"></script><script src="/helpers/codes/css.js" data-svelte="svelte-1471t2x"></script><script src="/helpers/codes/xml+mixedHtml.js" data-svelte="svelte-1471t2x"></script><script src="/helpers/codes/js.js" data-svelte="svelte-1471t2x"></script><link rel="stylesheet" href="/helpers/codes/codemirror+cobalt.css" data-svelte="svelte-1471t2x">
+	<title>Jupiter</title><script src="/helpers/codes/codemirror.js" data-svelte="svelte-1tbe73y"></script><script src="/helpers/codes/css.js" data-svelte="svelte-1tbe73y"></script><script src="/helpers/codes/xml+mixedHtml.js" data-svelte="svelte-1tbe73y"></script><script src="/helpers/codes/js.js" data-svelte="svelte-1tbe73y"></script><link rel="stylesheet" href="/helpers/codes/codemirror+cobalt.css" data-svelte="svelte-1tbe73y"><style data-svelte="svelte-1tbe73y">body {
+      background: #000;
+    }
+  </style>
 
 		
 
-		<link rel="modulepreload" href="/./_app/start-6999be44.js">
-		<link rel="modulepreload" href="/./_app/chunks/vendor-82e02203.js">
+		<link rel="modulepreload" href="/./_app/start-127f036a.js">
+		<link rel="modulepreload" href="/./_app/chunks/vendor-3f19d308.js">
 		<link rel="modulepreload" href="/./_app/chunks/paths-45dac81d.js">
-		<link rel="modulepreload" href="/./_app/layout.svelte-fda73777.js">
-		<link rel="modulepreload" href="/./_app/pages/debug/index.svelte-b7b00664.js">
-		<link rel="modulepreload" href="/./_app/chunks/button-3543e369.js">
+		<link rel="modulepreload" href="/./_app/layout.svelte-fa781721.js">
+		<link rel="modulepreload" href="/./_app/pages/debug/index.svelte-8ccd439b.js">
+		<link rel="modulepreload" href="/./_app/chunks/button-8df1a383.js">
 		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
 		<link rel="stylesheet" href="/./_app/assets/pages/debug/index.svelte-9a054fec.css">
 		<link rel="stylesheet" href="/./_app/assets/svgIcon.svelte_svelte&type=style&lang-9670f4ad.css">
 
 		<script type="module">
-			import { start } from "/./_app/start-6999be44.js";
+			import { start } from "/./_app/start-127f036a.js";
 			start({
 				target: document.querySelector("body"),
 				paths: {"base":"","assets":"/."},
@@ -36,8 +39,8 @@
 					status: 200,
 					error: null,
 					nodes: [
-						import("/./_app/layout.svelte-fda73777.js"),
-						import("/./_app/pages/debug/index.svelte-b7b00664.js")
+						import("/./_app/layout.svelte-fa781721.js"),
+						import("/./_app/pages/debug/index.svelte-8ccd439b.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -82,37 +85,35 @@
         <button  class="btn  svelte-1fok419" style="margin:0;;--theme:#18f;border-radius:0;">Min CSS
 </button></div>
       <div class="p-10">undefined</div></div>
-    <div class="w-100 codeContainer" style="position:relative;height:96%;"><textarea spellcheck="true" id="code">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-        &lt;style&gt;
-        body{
-            background: #fff;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            height:100vh;
-        }
-        h1{
-            font: lighter 32px Helvetica;
-            color: #f42;
-        }
-        &lt;/style&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;h1&gt;This is a REPL!&lt;/h1&gt;
-        &lt;script&gt;
-        // fetch(URL, {
-        //     method: &quot;GET&quot;,
-        //     headers: {&quot;Content-Type&quot;: &quot;application/json&quot;},
-        //     body: JSON.stringify(data)
-        // })
-        //     .then((res) =&gt; res.TYPE)
-        //     .then((r) =&gt; ACTION);
-        &lt;/script&gt;
-    &lt;/body&gt;
-&lt;/html&gt;</textarea></div></div>
-  <div class="boxies p-0 m-0 w-50 svelte-kpzp2w"><iframe title="sim" class="w-100 p-0 svelte-kpzp2w" frameborder="0"></iframe></div>
+    <div class="w-100 codeContainer" style="position:relative;height:96%;"><textarea spellcheck="true" id="code">&lt;style&gt;
+body{
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+h1{
+    /* CSS COMMENT */
+    font: lighter 32px Helvetica;
+    color: #f42;
+}
+&lt;/style&gt;
+&lt;h1&gt;This is a REPL!&lt;/h1&gt;
+&lt;!-- HTML COMMENT --&gt;
+&lt;script&gt;
+    import { base } from &quot;$app/paths&quot;;
+    // JS COMMENT
+    const number = [ 1 || &quot;One&quot; ];
+    fetch(URL, {
+        method: &quot;GET&quot;,
+        headers: {&quot;Content-Type&quot;: &quot;application/json&quot;},
+        body: JSON.stringify(data)
+    })
+    .then((res) =&gt; res.TYPE)
+    .then((r) =&gt; ACTION);
+&lt;/script&gt;</textarea></div></div>
+  <div class="boxies p-0 m-0 w-50 svelte-kpzp2w"><iframe title="sim" src="/assets/repl.html" class="w-100 p-0 svelte-kpzp2w" frameborder="0"></iframe></div>
 </section>
 
 
