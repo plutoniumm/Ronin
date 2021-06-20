@@ -1,1 +1,0 @@
-const t=async()=>{const t=await fetch("http://localhost:1872/sys/smc");return await t.json()},a=async()=>{const t=await fetch("http://localhost:1872/sys/net");return await t.text()},s=(t=new Date)=>new Date(t).toLocaleDateString("en-GB",{weekday:"short",month:"short",day:"numeric",hour12:!1,hour:"2-digit",minute:"2-digit"});export{s as d,a as n,t as s};

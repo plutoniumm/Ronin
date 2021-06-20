@@ -100,12 +100,24 @@ input, button, textarea{
 .tx-c{text-align: center;}
 
 .w{
+	&-auto{ width:auto;}
 	&-100{ width: 100%; }
 	&-50{ width: 50%; }
 	&-33{ width: 33.33%; }
 	&-25{ width: 25%; }
 	&-20{ width: 20%; }
 	&-0{ width: 0; }
+}
+
+.h{
+	&-auto{ height:auto;}
+	&-1vh{ height: 100vh; }
+	&-100{ height: 100%; }
+	&-50{ height: 50%; }
+	&-33{ height: 33.33%; }
+	&-25{ height: 25%; }
+	&-20{ height: 20%; }
+	&-0{ height: 0; }
 }
 
 .t{
@@ -118,6 +130,10 @@ input, button, textarea{
 	&-col{
 		display: flex;
 		flex-direction: column;
+	}
+	&-wrap{
+		display: flex;
+		flex-wrap: wrap;
 	}
 }
 
