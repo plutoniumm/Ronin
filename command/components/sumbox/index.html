@@ -16,14 +16,10 @@
 		<link rel="modulepreload" href="/./_app/chunks/vendor-71768ae6.js">
 		<link rel="modulepreload" href="/./_app/chunks/paths-45dac81d.js">
 		<link rel="modulepreload" href="/./_app/layout.svelte-17f8e03f.js">
-		<link rel="modulepreload" href="/./_app/pages/stream/components/bar.svelte-aa622b1e.js">
-		<link rel="modulepreload" href="/./_app/chunks/store-1bf8e305.js">
-		<link rel="modulepreload" href="/./_app/chunks/client_keys-40eee54c.js">
+		<link rel="modulepreload" href="/./_app/pages/command/components/sumbox.svelte-d96f3478.js">
 		<link rel="modulepreload" href="/./_app/chunks/molecular-e8adf827.js">
-		<link rel="modulepreload" href="/./_app/chunks/svgIcon-6b4acc7f.js">
 		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
-		<link rel="stylesheet" href="/./_app/assets/pages/stream/components/bar.svelte-4b2ab7e0.css">
-		<link rel="stylesheet" href="/./_app/assets/svgIcon.svelte_svelte&type=style&lang-9670f4ad.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/command/components/sumbox.svelte-58b0a89f.css">
 
 		<script type="module">
 			import { start } from "/./_app/start-0d8f305c.js";
@@ -40,11 +36,11 @@
 					error: null,
 					nodes: [
 						import("/./_app/layout.svelte-17f8e03f.js"),
-						import("/./_app/pages/stream/components/bar.svelte-aa622b1e.js")
+						import("/./_app/pages/command/components/sumbox.svelte-d96f3478.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
-						path: "/stream/components/bar",
+						path: "/command/components/sumbox",
 						query: new URLSearchParams(""),
 						params: {}
 					}
@@ -78,15 +74,11 @@
 	
 
 
-<section class="o-0 p-10 flex blur svelte-1n372l9"><div>Helios</div>
-
-  <form style="background:#444;"><input class="p-5 svelte-1n372l9" id="srcBox" size="35" placeholder="Search" value="">
-    <svg class=" svelte-xufjgf" viewBox="0 0 32 32" width="22" height="22" stroke="currentcolor" stroke-width="2" fill="none" style="position:relative;top:3px;left:5px"><circle cx="14" cy="14" r="12"></circle>
-      <path d="M23 23 L30 30"></path></svg>
-    <input class="o-0 w-0 svelte-1n372l9" type="submit" value=""></form>
-
-  <div><button class="red svelte-1n372l9">★ </button></div>
-</section>
+<div id="stats" class="blur m-10 p-10 svelte-181llfb">Fan Speed: <progress max="6520" value="0"></progress>
+  <br> CPU Temp: <progress max="100" value="0"></progress>
+  <br> MBo Temp: <progress max="100" value="0"></progress>
+  <br> Networks: <i>...</i>
+</div>
 
 
 

@@ -15,7 +15,7 @@ body {
 	}
 }
 
-*::-webkit-scrollbar { display: none; }
+*::-webkit-scrollbar { opacity: 0.25; }
 
 input, button, textarea{
 	position: relative;
