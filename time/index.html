@@ -8,7 +8,10 @@
 
 	<link rel='stylesheet' href='/shared/global.css'>
 
-	
+	<style class="svelte-12b4jtt" data-svelte="svelte-kubzmq">body {
+            background: #f63;
+        }
+    </style>
 
 		
 
@@ -16,9 +19,10 @@
 		<link rel="modulepreload" href="/./_app/chunks/vendor-7f046df2.js">
 		<link rel="modulepreload" href="/./_app/chunks/paths-45dac81d.js">
 		<link rel="modulepreload" href="/./_app/layout.svelte-4d9c3605.js">
-		<link rel="modulepreload" href="/./_app/pages/command/components/search.svelte-9b065ee8.js">
+		<link rel="modulepreload" href="/./_app/pages/time.svelte-43fabc3f.js">
+		<link rel="modulepreload" href="/./_app/chunks/molecular-c58642ff.js">
 		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
-		<link rel="stylesheet" href="/./_app/assets/pages/command/components/search.svelte-25d713c3.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/time.svelte-29495d34.css">
 
 		<script type="module">
 			import { start } from "/./_app/start-0060cb01.js";
@@ -35,11 +39,11 @@
 					error: null,
 					nodes: [
 						import("/./_app/layout.svelte-4d9c3605.js"),
-						import("/./_app/pages/command/components/search.svelte-9b065ee8.js")
+						import("/./_app/pages/time.svelte-43fabc3f.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
-						path: "/command/components/search",
+						path: "/time",
 						query: new URLSearchParams(""),
 						params: {}
 					}
@@ -73,11 +77,15 @@
 	
 
 
-<section class="flex-col" style="justify-content: center;align-items: center;"><br>
-  <form class="flex svelte-o0q5ul"><div class="wrapper flex p-5 svelte-o0q5ul"><img id="engineImage" src="/icons/Basic.svg" alt="" class="svelte-o0q5ul">
-      <input id="magic" required size="150" class="svelte-o0q5ul"></div>
-    <input id="submit" type="submit" value=" " class="svelte-o0q5ul"></form>
-  <div class="p-10" style="width:calc(100% - 1em);margin-top:0.5em;"><ul id="autoComplete" class="blur m-h-auto o-100 svelte-o0q5ul"></ul></div>
+
+
+<section class="h-1vh flex-col flex-wrap svelte-12b4jtt"><div class="w-100 svelte-12b4jtt" id="top"><input type="checkbox" name="v2" id="v2" style="display:none;" class="svelte-12b4jtt">
+        <label for="v2" class="svelte-12b4jtt"><svg id="loop" viewBox="0 0 32 32" class="svelte-12b4jtt"><path fill="none" d="M29 16 C29 22 24 29 16 29 8 29 3 22 3 16 3 10 8 3 16 3 21 3 25 6 27 9 M20 10 L27 9 28 2" class="svelte-12b4jtt"></path></svg>
+            <input id="looptime" type="text" disabled class="svelte-12b4jtt" value="00:00:10"></label></div>
+    <div class="tx-c svelte-12b4jtt" contenteditable id="timer">00:00:10</div>
+    <div class="tx-c o-75 svelte-12b4jtt" id="controls"><svg id="playpause" viewBox="0 0 32 32" class="svelte-12b4jtt"><path d="M23 2 L23 28 M9 2 L9 28" fill="none" class="svelte-12b4jtt"></path></svg>
+        <svg id="fullstop" viewBox="0 0 32 32" fill="var(--primary)" class="svelte-12b4jtt"><rect x="0" y="0" width="32" height="32" class="svelte-12b4jtt"></rect></svg></div>
+    
 </section>
 
 
