@@ -12,7 +12,7 @@
 
 		
 
-		<link rel="modulepreload" href="/./_app/start-a58935d2.js">
+		<link rel="modulepreload" href="/./_app/start-894c00a8.js">
 		<link rel="modulepreload" href="/./_app/chunks/vendor-60de8ae2.js">
 		<link rel="modulepreload" href="/./_app/chunks/paths-45dac81d.js">
 		<link rel="modulepreload" href="/./_app/layout.svelte-020bfa10.js">
@@ -23,7 +23,7 @@
 		<link rel="stylesheet" href="/./_app/assets/suggestion-0e6d464e.css">
 
 		<script type="module">
-			import { start } from "/./_app/start-a58935d2.js";
+			import { start } from "/./_app/start-894c00a8.js";
 			start({
 				target: document.querySelector("body"),
 				paths: {"base":"","assets":"/."},
@@ -50,25 +50,10 @@
 		</script>
 
 	<script>
-		const URLpars = () => {
-			const entries = new URLSearchParams( window.location.search ).entries();
-			const params = {};
-			for ( let entry of entries ) params[ entry[ 0 ] ] = entry[ 1 ];
-			return params;
-		};
-		const chURL = ( key, value ) => {
-			let searchParams = new URLSearchParams( window.location.search );
-			searchParams.set( key, value );
-			let newurl = `${ window.location.protocol }//${ window.location.host + window.location.pathname
-				}?${ searchParams.toString() }`;
-			window.history.pushState( { path: newurl }, "", newurl );
-			return 0;
-		};
-
 		const serverURL = 'https://ronin.host:1872/';
 		const clientURL = 'http://ronin.host:1873/';
 	</script>
-	<script src="/shared/js/molecular.js"></script>
+	<script src="/shared/js/RoninScript.js"></script>
 </head>
 
 <body xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:relative;">
@@ -87,8 +72,5 @@
 	
 
 </body>
-<!-- https://www.assemblyscript.org/introduction.html -->
-<!-- https://www.youtube.com/watch?v=u0Jgz6QVJqg -->
-<!-- https://developer.apple.com/documentation/safariservices/safari_web_extensions/converting_a_web_extension_for_safari -->
 
 </html>
