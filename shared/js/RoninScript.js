@@ -1,7 +1,7 @@
 const ƒ = ( x ) => document.querySelector( x );
 const ƒA = ( x ) => [ ...document.querySelectorAll( x ) ];
 
-const escape = str => str.replace(
+const String2HTML = str => str.replace(
     /[&<>'"]/g,
     tag =>
     ( {
@@ -13,7 +13,7 @@ const escape = str => str.replace(
     }[ tag ] || tag )
 );
 
-const unescape = str => str.replace(
+const HTML2String = str => str.replace(
     /&amp;|&lt;|&gt;|&#39;|&quot;/g,
     tag =>
     ( {
@@ -24,8 +24,6 @@ const unescape = str => str.replace(
         '&quot;': '"'
     }[ tag ] || tag )
 );
-
-Object.prototype.toString = function () { return `${ JSON.stringify( this ) }` };
 
 const getµ = () => {
     const entries = new URLSearchParams( window.location.search ).entries();
