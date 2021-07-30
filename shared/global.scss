@@ -15,6 +15,8 @@ body {
 	}
 }
 
+img{object-fit: cover;}
+
 *::-webkit-scrollbar { display:none; }
 
 input, button, textarea{
@@ -72,27 +74,27 @@ input, button, textarea{
 	&-100{ opacity: 1; }
 }
 
-.▪{ padding:0; }
-.◼{ padding:5px; }
-.⬛{ padding:20px; }
+.p0{ padding:0; }
+.p5{ padding:5px; }
+.p20{ padding:20px; }
 
-.▫{ margin:0; }
-.◻{ margin:5px; }
-.⬜{ margin:20px; }
+.m0{ margin:0; }
+.m5{ margin:5px; }
+.m20{ margin:20px; }
 .m-h-auto{ margin: 0 auto; }
 
-.ℹ1{font-weight:100;}
-.ℹ2{font-weight:200;}
-.ℹ3{font-weight:300;}
-.ℹ4{font-weight:400;}
-.ℹ5{font-weight:500;}
-.ℹ6{font-weight:600;}
-.ℹ7{font-weight:700;}
+.fw1{font-weight:100;}
+.fw2{font-weight:200;}
+.fw3{font-weight:300;}
+.fw4{font-weight:400;}
+.fw5{font-weight:500;}
+.fw6{font-weight:600;}
+.fw7{font-weight:700;}
 
-.➡{text-align: right;}
-.↕{text-align: center;}
-.↔{text-align: justify;}
-.⬅{text-align: left;}
+.†r{text-align: right;}
+.†c{text-align: center;}
+.†j{text-align: justify;}
+.†l{text-align: left;}
 
 .w{
 	&-auto{ width:auto;}
@@ -115,13 +117,13 @@ input, button, textarea{
 	&-0{ height: 0; }
 }
 
-.💪{
+.ƒ{
 	display: flex;
 	&-col{
 		display: flex;
 		flex-direction: column;
 	}
-	&🌯{
+	&∑{
 		display: flex;
 		flex-wrap: wrap;
 	}

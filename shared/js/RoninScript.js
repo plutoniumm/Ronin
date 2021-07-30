@@ -61,3 +61,5 @@ const onClickOutside = ( element, callback ) => {
         if ( !element.contains( e.target ) ) callback();
     } );
 };
+
+const truthy = condition => condition ? true : false;
