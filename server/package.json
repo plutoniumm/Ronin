@@ -9,7 +9,7 @@
         "@nanoexpress/middleware-body-parser": "1.2.2",
         "@nanoexpress/middleware-static-serve": "1.0.3",
         "cors": "2.8.5",
-        "nanoexpress": "5.0.6",
+        "nanoexpress": "5.0.8",
         "url-metadata": "2.5.0"
     }
 }
