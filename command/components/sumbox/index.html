@@ -8,7 +8,7 @@
 
 	<link rel='stylesheet' href='/shared/global.css'>
 
-	<link rel="preconnect" href="https://api.nukes.in/" data-svelte="svelte-1u7m5oz"><link rel="preload" href="https://api.nukes.in/data/NASA/img" as="image" data-svelte="svelte-1u7m5oz"><link rel="preconnect" href="https://web.whatsapp.com/" data-svelte="svelte-1u7m5oz"><link rel="preconnect" href="https://en.wikipedia.org/" data-svelte="svelte-1u7m5oz"><link rel="preconnect" href="https://github.com" data-svelte="svelte-1u7m5oz"><link rel="prefetch" href="/stream" data-svelte="svelte-1u7m5oz"><link rel="prefetch" href="/notes" data-svelte="svelte-1u7m5oz">
+	
 
 		
 
@@ -16,18 +16,10 @@
 		<link rel="modulepreload" href="/./_app/chunks/vendor-cb4ee0f1.js">
 		<link rel="modulepreload" href="/./_app/chunks/paths-45dac81d.js">
 		<link rel="modulepreload" href="/./_app/layout.svelte-25baef04.js">
-		<link rel="modulepreload" href="/./_app/pages/index.svelte-6f53400e.js">
 		<link rel="modulepreload" href="/./_app/pages/command/components/sumbox.svelte-1247ffb6.js">
 		<link rel="modulepreload" href="/./_app/chunks/molecular-c58642ff.js">
-		<link rel="modulepreload" href="/./_app/pages/command/components/search.svelte-c9b1f4bf.js">
-		<link rel="modulepreload" href="/./_app/chunks/samurai-9cc4b03f.js">
-		<link rel="modulepreload" href="/./_app/chunks/store-52b94296.js">
-		<link rel="modulepreload" href="/./_app/pages/command/components/suggestion.svelte-67d4907c.js">
 		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
-		<link rel="stylesheet" href="/./_app/assets/pages/index.svelte-b8ce73a8.css">
 		<link rel="stylesheet" href="/./_app/assets/pages/command/components/sumbox.svelte-58b0a89f.css">
-		<link rel="stylesheet" href="/./_app/assets/pages/command/components/search.svelte-6d2997e2.css">
-		<link rel="stylesheet" href="/./_app/assets/pages/command/components/suggestion.svelte-de2d6c02.css">
 
 		<script type="module">
 			import { start } from "/./_app/start-0782660b.js";
@@ -44,11 +36,11 @@
 					error: null,
 					nodes: [
 						import("/./_app/layout.svelte-25baef04.js"),
-						import("/./_app/pages/index.svelte-6f53400e.js")
+						import("/./_app/pages/command/components/sumbox.svelte-1247ffb6.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
-						path: "/",
+						path: "/command/components/sumbox",
 						query: new URLSearchParams(""),
 						params: {}
 					}
@@ -76,21 +68,11 @@
 	
 
 
-
-
-<section class="w-100">
-  <div id="stats" class="🥃 m5 p20 svelte-181llfb">Fan Speed: <progress max="6520" value="0"></progress>
+<div id="stats" class="🥃 m5 p20 svelte-181llfb">Fan Speed: <progress max="6520" value="0"></progress>
   <br> CPU Temp: <progress max="100" value="0"></progress>
   <br> MBo Temp: <progress max="100" value="0"></progress>
   <br> Networks: <i>...</i>
 </div>
-  <section class="ƒ-col svelte-u4xzy8"><form class="svelte-u4xzy8"><div class="wrapper ƒ p5 svelte-u4xzy8"><img id="engineImage" src="/icons/Basic.svg" alt="" class="svelte-u4xzy8">
-      <input placeholder="Ronin" id="magic" required size="150" class="svelte-u4xzy8"></div>
-    <input id="submit" type="submit" value=" " style="display:none;"></form>
-  <ul id="autoComplete" class="p5 m-h-auto svelte-ibm7g">
-</ul>
-</section>
-</section>
 
 
 
