@@ -94,6 +94,10 @@ input, button, textarea{
 .†j{text-align: justify;}
 .†l{text-align: left;}
 
+.∆-ct{justify-content:center;}
+.∆-bw{justify-content:space-between;}
+.∆-ar{justify-content:space-around;}
+
 .w{
 	&-auto{ width:auto;}
 	&-100{ width: 100%; }
@@ -124,28 +128,5 @@ input, button, textarea{
 	&∑{
 		display: flex;
 		flex-wrap: wrap;
-	}
-}
-
-details summary, details summary:focus{ outline:none; }
-
-.boxes{
-	justify-content: space-between;
-	width: 90%;
-	padding: 10px;
-	margin: 7px auto;
-	border-radius: 10px;
-	display: flex;
-}
-
-.inp-cont{
-	position: relative;
-	top: 7px;
-	.label {
-		font-size: 0.66em;
-		position: absolute;
-		top: -9px;
-		left: 0;
-		color: #fff8;
 	}
 }
