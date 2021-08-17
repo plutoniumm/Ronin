@@ -1,6 +1,22 @@
 const ƒ = ( x ) => document.querySelector( x );
 const ƒA = ( x ) => [ ...document.querySelectorAll( x ) ];
 
+window.onerror = function ( msg, url, lineNo, columnNo, error ) {
+    console.log( msg, url, lineNo, columnNo, error );
+    fetch( 'https://ronin.host:1871/error/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify( {
+            msg,    // error message
+            url,    // url of error
+            line: lineNo, // line number of error
+            column: columnNo, // column number of error
+            error   // error object
+        } )
+    } );
+    return false;
+}
+
 const hashBrowser = val => // takes in string and returns has promise
     crypto.subtle
         .digest( 'SHA-256', new TextEncoder( 'utf-8' ).encode( val ) )
